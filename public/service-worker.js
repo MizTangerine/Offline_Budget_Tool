@@ -4,6 +4,7 @@ const FILES_TO_CACHE = [
     "/"
     , "/icons/icon-192x192.png"
     , "/icons/icon-512x512.png"
+    , "/public/images/travel.jpg"
     , "/db.js"
     , "/favicon.ico"
     , "/index.js"
