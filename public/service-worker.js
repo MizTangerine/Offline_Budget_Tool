@@ -5,6 +5,7 @@ const FILES_TO_CACHE = [
     , "/icons/icon-192x192.png"
     , "/icons/icon-512x512.png"
     , "/db.js"
+    , "/favicon.ico"
     , "/index.js"
     , "/manifest.webmanifest"
     , "/styles.css"
@@ -41,7 +42,7 @@ self.addEventListener('activate', function (event) {
 self.addEventListener('fetch', function (event) {
     // console.log('fetch working')
     if (event.request.url.includes('/api/')) {
-        console.log('testing api')
+        // console.log('testing api')
         event.respondWith(
             caches.open(DATA_CACHE_NAME).then(cache => {
                 return fetch(event.request)

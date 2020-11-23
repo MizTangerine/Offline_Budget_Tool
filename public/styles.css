@@ -1,6 +1,21 @@
+body::after {
+  content: "";
+  background: url('./images/travel.jpg');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 body {
   font-size: 120%;
-  font-family: Arial;
+  font-family: 'Delius';
 }
 
 button, input {
@@ -20,6 +35,10 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
 }
 
 .error {
