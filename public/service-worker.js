@@ -4,7 +4,7 @@ const FILES_TO_CACHE = [
     "/"
     , "/icons/icon-192x192.png"
     , "/icons/icon-512x512.png"
-    , "/public/images/travel.jpg"
+    , "/images/travel.jpg"
     , "/db.js"
     , "/favicon.ico"
     , "/index.js"
@@ -14,10 +14,12 @@ const FILES_TO_CACHE = [
 
 self.addEventListener('install', function (event) {
     event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => {
-            // console.log('pre-cache successfull!');
-            return cache.addAll(FILES_TO_CACHE);
-        })
+        caches.open(CACHE_NAME)
+            .then(cache => {
+                // console.log('pre-cache successfull!');
+                return cache.addAll(FILES_TO_CACHE);
+            })
+            .catch((err) => { console.error(err.stack); })
     );
     self.skipWaiting();
 });
@@ -58,16 +60,19 @@ self.addEventListener('fetch', function (event) {
                         // Network request failed, get it from the cache
                         return cache.match(event.request);
                     });
-            }).catch(err => console.log(err))
+            })
         );
-
         return;
-    }
+    };
 
     // if the request is not for the API, serve static assets using 'offline-first' approach.
     event.respondWith(
-        caches.match(event.request).then(function (response) {
-            return response || fetch(event.request);
-        })
+        caches.match(event.request)
+            .then(function (response) {
+                // console.log('offline sw 72')
+                return response || fetch(event.request);
+
+            })
+            .catch((err) => { console.error(err.stack); })
     );
 });
