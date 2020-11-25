@@ -20,8 +20,11 @@ function populateTotal() {
     return total + parseInt(t.value);
   }, 0);
 
+  let negRed = parseInt(total) < 0 ? 'negRed' : 'pos';
+
   let totalEl = document.querySelector('#total');
-  totalEl.textContent = total;
+  totalEl.textContent = total.toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+  totalEl.classList.add(negRed);
 }
 
 function populateTable() {
@@ -30,10 +33,12 @@ function populateTable() {
 
   transactions.forEach(transaction => {
     // create and populate a table row
+    let negRed = parseInt(transaction.value) < 0 ? 'negRed' : '';
+    let properName = transaction.name.split(' ').map(name => name.substr(0, 1).toUpperCase() + name.substr(1)).join(' ');
     let tr = document.createElement('tr');
     tr.innerHTML = `
-      <td>${transaction.name}</td>
-      <td>${transaction.value}</td>
+      <td>${properName}</td>
+      <td class="align-rt ${negRed}">${parseInt(transaction.value).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</td>
     `;
 
     tbody.appendChild(tr);

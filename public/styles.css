@@ -25,19 +25,37 @@ button, input {
 
 table {
   width: 100%;
+  position: relative;
 }
 
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  /* background-color: #6666ff; */
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+th {
+  background-color: #6666ff;
+  text-align: center;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+.align-rt {
+  text-align: right;
+}
+
+.negRed {
+  color: red;
 }
 
 tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(even) {
   background-color: white;
 }
 
