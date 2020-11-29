@@ -8,7 +8,9 @@ A budget tool that allows users to enter deposits and withdrawals without intern
 
 Link to live site: [Offline Budget Tool](https://hidden-mesa-98938.herokuapp.com/)
 
-![Landing Page](public/images/LandingPage.png)
+Link to Heroku Repo: [Heroku Repo](https://dashboard.heroku.com/apps/hidden-mesa-98938)
+
+![Landing Page](public/images/LandingPage2.png)
 
 ## Table of Contents
 
