@@ -10,13 +10,22 @@ Link to live site: [Offline Budget Tool](https://hidden-mesa-98938.herokuapp.com
 
 Link to Heroku Repo: [Heroku Repo](https://dashboard.heroku.com/apps/hidden-mesa-98938)
 
+Link to GitHub Repo: [GitHub Repo](https://github.com/clarissareeve/Offline_Budget_Tool)
+
 ![Landing Page](public/images/LandingPage2.png)
 
 ## Table of Contents
 
+* [User Story](#user-story)
 * [License](#license)
 * [Contributing](#contributing)
 * [Questions](#questions)
+
+## User Story
+
+When I travel,
+I WANT to be able to track my withdrawals and deposits with or without a data/internet connection,
+SO THAT my account balance is accurate.
 
 ## License
 
