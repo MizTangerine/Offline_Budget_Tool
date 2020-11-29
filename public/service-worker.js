@@ -1,9 +1,9 @@
-const CACHE_NAME = 'static-cache-v2';
-const DATA_CACHE_NAME = 'data-cache-v1';
+const CACHE_NAME = 'static-cache-v3';
+const DATA_CACHE_NAME = 'data-cache-v2';
 const FILES_TO_CACHE = [
     "/"
-    , "/icons/icon-192x192.png"
-    , "/icons/icon-512x512.png"
+    , "/icons/android-chrome-192x192.png"
+    , "/icons/android-chrome-512x512.png"
     , "/images/travel.jpg"
     , "/db.js"
     , "/favicon.ico"

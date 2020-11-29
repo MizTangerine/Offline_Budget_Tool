@@ -15,12 +15,19 @@ body::after {
 
 body {
   font-size: 120%;
-  font-family: 'Delius';
+  font-family: Arial, Helvetica, sans-serif;
+  /* Delius, Arial, Helvetica, sans-serif; */
+}
+
+.total {
+  font-family: Righteous, Helvetica, sans-serif;
+  letter-spacing: 7px;
 }
 
 button, input {
   font-size: 100%;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
+  ;
 }
 
 table {
@@ -32,19 +39,25 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  /* background-color: #6666ff; */
 }
 
 th {
   background-color: #6666ff;
   text-align: center;
   font-weight: bold;
+  font-family: Righteous, Helvetica, sans-serif;
+  letter-spacing: 7px;
   position: sticky;
   top: 0;
 }
 
+.transaction {
+  font-family: Delius, Arial, Helvetica, sans-serif;
+}
+
 .align-rt {
   text-align: right;
+  font-family: Arial;
 }
 
 .negRed {

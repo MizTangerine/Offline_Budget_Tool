@@ -37,7 +37,7 @@ function populateTable() {
     let properName = transaction.name.split(' ').map(name => name.substr(0, 1).toUpperCase() + name.substr(1)).join(' ');
     let tr = document.createElement('tr');
     tr.innerHTML = `
-      <td>${properName}</td>
+      <td class="transaction">${properName}</td>
       <td class="align-rt ${negRed}">${parseInt(transaction.value).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</td>
     `;
 
